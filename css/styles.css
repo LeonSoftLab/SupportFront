@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    height: 50px;
+}
+
+.authButton {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.menu {
+    background-color: #333;
+    height: 50px;
+    background-color: #f5f5dc;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 10px;
+    transition: background-color 0.3s;
+    display: block;
+    padding: 10px 15px;
+    line-height: 30px;
+}
+
+.menu a:hover {
+    color: #fff;
+    background-color: #59a8f7;
+}
+
+.section {
+    padding: 20px;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.section input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 25%;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 500px;
+    box-sizing: border-box;
+    position: relative; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#tickets button {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+#tickets table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+#tickets table th,
+#tickets table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+#tickets table th {
+    background-color: #f2f2f2;
+}
+
+#tickets table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tickets table tr:hover {
+    background-color: #f5f5f5;
+}
+
+#authForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+#authForm label {
+    margin-top: 10px;
+}
+
+#authForm input {
+    margin-bottom: 10px;
+    padding: 5px;
+    height: 25px; /* Установим высоту поля ввода */
+}
+
+#authForm button {
+    padding: 10px;
+    font-size: 12px; /* увеличение размера шрифта */
+    height: 50px; /* увеличение высоты */
+}
+
+#newTicket {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
