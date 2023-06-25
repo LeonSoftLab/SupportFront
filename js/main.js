@@ -1,8 +1,8 @@
-var sections = document.getElementsByClassName('section');
+let sections = document.getElementsByClassName('section');
 
 // Функция для скрытия всех секций
 function hideAllSections() {
-    for (var i = 0; i < sections.length; i++) {
+    for (let i = 0; i < sections.length; i++) {
         sections[i].classList.add('hidden');
     }
 }
@@ -21,15 +21,15 @@ function showSection(id) {
 }
 
 // Добавляем обработчики событий для элементов меню
-var menuItems = document.querySelectorAll('.menu a');
-for (var i = 0; i < menuItems.length; i++) {
+let menuItems = document.querySelectorAll('.menu a');
+for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener('click', function(event) {
         event.preventDefault();
-        var id = this.getAttribute('href').substring(1);
+        let id = this.getAttribute('href').substring(1);
         hideAllSections();
         showSection(id);
         if (id === 'tickets') {
-            displayTickets();
+            showAllTicketsHandler();
         }
     });
 }

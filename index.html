@@ -5,27 +5,26 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+
     <div class="header">
-        <img src="images/logo.png" class="logo" alt="Logo">
+        <img src="images/LogoCompany.png" class="logo" alt="Logo">
+        <!-- Горизонтальное меню -->
+        <nav class="menu">
+            <ul>
+                <li><a href="#tickets" onclick="showSection('tickets')">Тикеты</a></li>
+                <li><a href="#notifications" onclick="showSection('notifications')">Оповещения</a></li>
+                <li><a href="#instructions" onclick="showSection('instructions')">Инструкции</a></li>
+            </ul>
+        </nav>
         <button id="authButton" class="authButton">Авторизация</button>
     </div>
-
-    <img src="images/background.jpg" class="background" alt="Background">
-
-    <!-- Горизонтальное меню -->
-    <nav class="menu">
-        <ul>
-            <li><a href="#tickets" onclick="showSection('tickets')">Тикеты</a></li>
-            <li><a href="#notifications" onclick="showSection('notifications')">Оповещения</a></li>
-            <li><a href="#instructions" onclick="showSection('instructions')">Инструкции</a></li>
-        </ul>
-    </nav>
 
     <div id="tickets" class="section">
         <h2>Ваши тикеты</h2>
         <input type="text" id="searchTickets" placeholder="Поиск тикетов...">
-        <button id="addTicketBtn">Добавить новый тикет</button>
-        <table id="ticketsTable">
+        <button id="show-all-btn">Показать все тикеты</button>
+        <button id="add-ticket-btn">Добавить новый тикет</button>
+        <table id="tickets-table">
             <thead>
                 <tr>
                     <th style="width:10%">Номер тикета</th>
@@ -41,10 +40,10 @@
     </div>
 
     <div id="newTicketModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="width: 60%; max-width: 700px;">
             <span class="close">&times;</span>
             <form id="newTicketForm">
-                <label for="ticketTitle">Название:</label>
+                <label for="ticketTitle">Наименование:</label>
                 <input type="text" id="ticketTitle" required>
                 <label for="ticketDescription">Описание:</label>
                 <textarea id="ticketDescription" required></textarea>
