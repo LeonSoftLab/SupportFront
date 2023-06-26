@@ -83,15 +83,16 @@ class TaskView {
 
 // let addTaskButton = document.querySelector("#add-ticket-btn");
 // определяем элементы на странице и привязываем функции на события
-let showAllButton = document.querySelector("#show-all-btn");
+let showAllButton = document.querySelector("#show-alltickets-btn");
 let tasksTable = document.querySelector('#tickets-table').getElementsByTagName('tbody')[0];
+let newTicketFormModal = document.getElementById('newTicketModal');
 
 let tasksListView = new TasksListView(tasksTable);
 
 showAllButton.addEventListener("click", showAllTicketsHandler);
 
 window.addEventListener("load", function () {
-    tasksListView.drawAll();
+    showAllTicketsHandler();
 });
 
 function showAllTicketsHandler() {
@@ -100,7 +101,7 @@ function showAllTicketsHandler() {
 
 document.getElementById('searchTickets').addEventListener('input', function(e) {
     let searchTerm = e.target.value;
-    // Поиск тикетов
+    console.log(searchTerm)
 });
 
 document.getElementById('newTicketForm').addEventListener('submit', function(event) {
@@ -110,7 +111,7 @@ document.getElementById('newTicketForm').addEventListener('submit', function(eve
     // Отправка нового тикета
 });
 
-document.getElementById('addTicketBtn').addEventListener('click', function() {
+document.getElementById('add-ticket-btn').addEventListener('click', function() {
     document.getElementById('newTicketModal').style.display = 'block';
 });
 
@@ -118,8 +119,8 @@ document.getElementsByClassName('close')[0].addEventListener('click', function()
     document.getElementById('newTicketModal').style.display = 'none';
 });
 
-window.onclick = function(event) {
-    if (event.target == document.getElementById('newTicketModal')) {
-        document.getElementById('newTicketModal').style.display = 'none';
+window.addEventListener('click', function(event) {
+    if (event.target == newTicketFormModal) {
+        newTicketFormModal.style.display = 'none';
     }
-}
+});

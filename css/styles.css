@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,13 +12,27 @@ body {
     background-color: #f8f8f8;
 }
 
-.logo {
-    height: 50px;
+footer {
+    background-color: #f5f5dc;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.authButton {
-    padding: 10px 20px;
+footer p {
+    margin: auto;
+}
+
+button {
+    padding: 5px 10px;
     cursor: pointer;
+    display: block;
+}
+
+.logo {
+    height: 50px;
 }
 
 .menu {
@@ -55,14 +69,26 @@ body {
     padding: 20px;
 }
 
-.section h2 {
-    margin-top: 0;
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
 }
 
-.section input[type="text"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 25%;
+.left-group {
+    display: flex;
+    align-items: center;
+}
+
+.right-group {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search-input {
+    height: 25px;
+    font-size: 12px;
 }
 
 .modal {
@@ -130,18 +156,9 @@ form textarea {
 
 form button {
     margin-top: 10px;
-    cursor: pointer;
     padding: 10px;
     font-size: 12px;
     height: 40px;
-}
-
-#tickets button {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-bottom: 10px;
 }
 
 #tickets table {

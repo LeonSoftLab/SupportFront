@@ -36,3 +36,4 @@ for (let i = 0; i < menuItems.length; i++) {
 
 // Отображаем секцию тикетов по умолчанию при загрузке страницы
 hideAllSections();
+showSection("news");

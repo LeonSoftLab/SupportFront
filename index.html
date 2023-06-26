@@ -3,41 +3,120 @@
 <head>
     <title>HelpDesk 2.0 User Portal</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="icons/Cycle128.ico" type="image/x-icon">
 </head>
 <body>
 
-    <div class="header">
+    <header>
         <img src="images/LogoCompany.png" class="logo" alt="Logo">
         <!-- Горизонтальное меню -->
         <nav class="menu">
             <ul>
+                <li><a href="#news" onclick="showSection('news')">Новости</a></li>
                 <li><a href="#tickets" onclick="showSection('tickets')">Тикеты</a></li>
                 <li><a href="#notifications" onclick="showSection('notifications')">Оповещения</a></li>
                 <li><a href="#instructions" onclick="showSection('instructions')">Инструкции</a></li>
             </ul>
         </nav>
         <button id="authButton" class="authButton">Авторизация</button>
-    </div>
+    </header>
 
-    <div id="tickets" class="section">
-        <h2>Ваши тикеты</h2>
-        <input type="text" id="searchTickets" placeholder="Поиск тикетов...">
-        <button id="show-all-btn">Показать все тикеты</button>
-        <button id="add-ticket-btn">Добавить новый тикет</button>
-        <table id="tickets-table">
-            <thead>
-                <tr>
-                    <th style="width:10%">Номер тикета</th>
-                    <th style="width:10%">Создано</th>
-                    <th style="width:35%">Название</th>
-                    <th style="width:25%">Статус</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Тикеты вставляем в JS -->
-            </tbody>
-        </table>
-    </div>
+    <main>
+        <div id="news" class="section">
+            <h2>Новости</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio libero earum in modi eveniet sed dolores atque. Quae, exercitationem animi. Exercitationem assumenda tempora at delectus dolor deleniti explicabo quidem vel!
+                Quo voluptatibus numquam provident consequuntur officiis iusto quae eligendi voluptates recusandae neque distinctio praesentium eos ea doloribus ab unde, earum alias sint sunt modi reprehenderit a rerum! Perferendis, consequatur? Nihil.
+                Exercitationem voluptatum omnis quas modi ipsum natus, in architecto! Assumenda nesciunt magnam natus quas possimus ducimus animi quaerat, ullam necessitatibus, aspernatur non optio cupiditate obcaecati sapiente facilis in veniam iure.
+                Sed esse rem iste. Placeat, et. Deserunt, voluptas voluptate. Ab, sed ex. Est praesentium sed impedit delectus atque nisi quidem maxime eligendi laudantium nobis eum officia doloribus, dolores cupiditate commodi.
+                At ipsa culpa harum explicabo quasi pariatur et molestias nemo labore, quis hic eaque nostrum id, recusandae animi cupiditate optio incidunt dolore magni reiciendis omnis consectetur! Et dignissimos eius exercitationem.
+                Odit nobis explicabo dolor alias ab quo sed quasi iste consequatur nisi fugit, earum dolores veniam libero corrupti error est. Fugiat fuga molestiae magnam mollitia tenetur quidem eaque aliquid? Quam.
+                Molestias, doloremque accusamus in atque aliquid ullam quaerat deleniti reiciendis aut et ipsum nostrum rem, laborum omnis cupiditate! Laudantium non libero facilis quam dignissimos possimus sint eveniet impedit ut aliquam.
+                Ratione repellat maxime quibusdam accusantium recusandae nam voluptates ad sint eaque natus facere reprehenderit quos optio consequatur a magni, minus corporis nisi necessitatibus nostrum. At amet delectus deleniti voluptates maxime!
+                Ratione nam nemo optio animi veritatis eos sequi aliquid atque, enim modi id itaque mollitia sunt deserunt ipsa minima. Voluptates unde provident odio aut laborum ex nesciunt magnam voluptatum eligendi.
+                Tempore, reprehenderit perspiciatis nulla odio aut adipisci hic quae. Est tempora velit accusamus asperiores corrupti nam ex ad, similique numquam ab dolore nemo voluptatibus laboriosam eum eveniet labore repellendus obcaecati.
+                Aliquid voluptates consectetur obcaecati itaque, nesciunt rem quas nulla quasi cum corrupti porro numquam hic officia provident eius perspiciatis mollitia officiis, autem animi ad, veritatis facilis exercitationem voluptatem? Et, deserunt?
+                Suscipit quisquam eligendi non. Inventore et eligendi libero doloribus ad, architecto vel eum, quos labore quaerat, quasi aperiam nobis numquam sapiente. Quibusdam, harum doloremque odio aliquam unde odit ea fugiat?
+                Assumenda provident voluptates delectus officiis, magni corrupti impedit minima quasi commodi exercitationem natus, accusantium dignissimos accusamus veritatis amet laboriosam sapiente ex dolore soluta. Ullam nam repellendus natus, neque possimus autem!
+                Distinctio accusamus delectus eos doloribus eligendi molestiae, nostrum labore. Perferendis explicabo nesciunt labore quaerat consequatur id hic, reprehenderit laboriosam dolorum at voluptatum quibusdam? Facilis numquam, voluptas sed aut expedita at.
+                Earum aliquam eum quia vitae nesciunt eligendi cupiditate provident deleniti possimus consequatur? Totam enim beatae sint consequatur quod fugiat vero ea amet, laborum odit pariatur quaerat. Eos nostrum explicabo ratione.
+                Ad aperiam iusto tempora nam? Animi iusto earum unde? Similique odio nostrum doloribus culpa placeat corporis neque libero consequuntur, praesentium fugit saepe expedita dolor blanditiis nemo quod ex eos enim.
+                Quaerat ipsum commodi non mollitia, nesciunt soluta nisi reprehenderit facere natus impedit voluptas animi corrupti blanditiis, debitis consequuntur accusamus voluptatibus! Aspernatur tempora vitae aut consequatur accusamus repellat, exercitationem fugiat accusantium.
+                Molestiae veniam nemo laboriosam nisi sequi vitae ullam iure eos repellendus! Laboriosam, iure vel. Ad vero eos repellendus quisquam minima sequi obcaecati voluptates, mollitia cum ab voluptas tempora rem molestias.
+                Est dolorum eos a quibusdam, nesciunt quaerat quos. Veritatis, vitae eligendi. Dolore minima, beatae rerum facilis aut officiis, alias commodi doloremque iusto, magni tempora quidem provident distinctio dolorem voluptates veniam!
+                Nobis, voluptatibus sint qui adipisci soluta cupiditate doloribus sapiente labore quod ipsam minus quisquam, commodi earum. Temporibus eius aperiam eligendi ea a natus soluta voluptates pariatur, quisquam asperiores ullam eaque!
+                Facere doloremque aliquam modi illum placeat quo. Iusto impedit obcaecati doloribus, dolorem sint provident dolorum quo ut dicta ullam optio inventore suscipit debitis numquam, explicabo nulla veniam, neque eveniet fuga.
+                Atque sit non tempora sed quam soluta, fugiat nobis ipsam unde id fuga aliquid quidem eos distinctio quae deleniti saepe minus ad explicabo dolore, doloremque quaerat quia cupiditate? Iusto, aliquid!
+                Blanditiis, rerum ipsam quia illum et alias, commodi quod delectus deleniti impedit quisquam minima, dignissimos fuga dicta. Maiores natus nam ducimus expedita, cupiditate perferendis perspiciatis nisi et, fuga quis ullam?
+                Repudiandae totam temporibus laborum odio odit pariatur perferendis molestiae quis quas delectus? Excepturi ullam odio, soluta sint, amet quaerat fugit itaque magnam ut odit repudiandae eum deleniti est ex? Explicabo.
+                Autem mollitia sint reprehenderit rerum maiores repudiandae harum laboriosam earum iure inventore facilis nemo, excepturi quis vero? Vitae doloribus, quos illum debitis ipsum a id iusto, eaque quisquam cumque deserunt?
+                Ut magni ea minus obcaecati in dignissimos fugiat aspernatur reprehenderit facilis, itaque esse iste, vel illum autem voluptatibus accusantium praesentium voluptate sequi dolor, eaque accusamus fugit? Aliquid placeat vitae itaque.
+                Illo beatae asperiores facilis nulla saepe ipsam quibusdam sint sequi. Corrupti harum atque enim at commodi sapiente! Vel voluptates eius nostrum cumque assumenda itaque et! Quis perferendis nisi cum ipsam!
+                Autem quam asperiores quaerat sit? Tenetur rem ad aperiam illo exercitationem eveniet dolores quia! Labore neque hic doloribus, blanditiis molestiae, architecto repudiandae minima tempore doloremque fugiat magni praesentium omnis! Fuga?
+                Ipsa et suscipit facilis quisquam laudantium reiciendis atque ea incidunt voluptatibus? Ratione ullam, magni eum et deserunt explicabo. Ipsa placeat suscipit expedita temporibus inventore voluptas aspernatur facere debitis vel dolorum!
+                Culpa, fugiat earum? A laborum veritatis quis aut cumque facere beatae eligendi modi et similique omnis quam mollitia atque inventore doloribus deleniti ut aspernatur corporis, impedit dolor iste. Possimus, odio.
+                Recusandae, velit. Ratione, vel ipsam maiores velit laborum distinctio autem culpa nostrum ad illum! Qui quod hic blanditiis cupiditate, veritatis tempore, harum, maiores quis quae expedita incidunt dignissimos! Non, ea!
+                In fuga impedit architecto sunt odit voluptatibus natus assumenda eius tempora distinctio aliquid dignissimos enim inventore vitae non aspernatur at aut, et similique! Unde nulla quibusdam voluptatum ad esse sit.
+                Facilis labore itaque aperiam numquam quis debitis, excepturi tenetur ipsum voluptate ea culpa autem ducimus fuga fugiat deserunt ab. Vitae, nemo placeat quaerat nisi aut praesentium eius totam obcaecati nesciunt?
+                Omnis aut deleniti nisi consectetur, doloribus perferendis delectus ullam corrupti natus earum incidunt porro voluptatem velit minima assumenda facere repellendus cumque vel dolores! Alias tenetur dolore non suscipit nihil quis.
+                Fugit labore animi illum minima ducimus optio voluptates ad laborum neque soluta accusantium, nemo culpa cum accusamus est consequuntur ratione explicabo placeat distinctio aspernatur! Ipsam voluptates asperiores voluptate quam expedita.
+                Asperiores aut id molestiae ex nisi libero officiis at ab, sequi totam atque laudantium eius eum blanditiis culpa enim natus numquam iste architecto! Sunt perferendis tempora, beatae nobis doloribus consectetur!
+                A in harum iusto illo, soluta porro velit quaerat, veniam sint quas reiciendis alias quia quod deleniti non atque cumque excepturi sed dolorem assumenda blanditiis commodi! Sequi sed odio iure!
+                Harum ad nihil quo, et aliquam quis beatae repudiandae accusantium veniam facere deleniti dolores? Veniam porro vel, consectetur blanditiis assumenda quibusdam eius culpa facere doloribus illum vero, possimus ea ipsa?
+                Totam fuga quidem deleniti obcaecati debitis enim rem, explicabo nisi placeat expedita ut minus magnam dignissimos delectus numquam iusto iure aperiam assumenda laudantium nemo perferendis aspernatur! Nulla non itaque a!
+                Mollitia, tenetur quasi. Facilis illo odio quo, ullam odit sint, fugiat molestias ea nulla voluptatum quis recusandae et dolores, officia corporis earum alias totam reiciendis! Quaerat dicta autem molestias quae.
+                Dolorem iusto beatae vel dolorum pariatur, sapiente dolore laudantium modi expedita molestiae veritatis, autem, aliquam veniam ullam explicabo officiis voluptate maxime doloribus quia in nobis ratione. Dolorem explicabo iste labore.
+                Laboriosam voluptatibus porro et delectus natus quae, beatae corporis perspiciatis voluptas blanditiis, quod quasi vero earum placeat corrupti culpa eligendi debitis! Ipsa iste tempore provident velit architecto nulla atque obcaecati.
+                Molestias minus quo explicabo numquam iure distinctio. Error optio est non eos excepturi, similique tempora minus velit dolor modi officia doloremque sequi temporibus id facilis veniam laboriosam aliquam, cumque sit.
+                Non amet accusantium eos expedita sed reprehenderit culpa, veniam similique sit quia quibusdam dignissimos aliquid ipsum earum in perferendis libero deleniti, doloremque recusandae possimus! In fugiat nulla earum fuga quidem.
+                Beatae vitae totam ex! Quisquam tempore beatae architecto suscipit enim maiores doloremque totam, veniam numquam perspiciatis asperiores est nulla perferendis quas itaque, non reprehenderit aspernatur voluptates delectus. Aliquid, itaque praesentium!
+                Labore quae, consequatur dolorem officia dolor earum ullam eaque ipsum velit laudantium optio aut recusandae reprehenderit deserunt a autem iusto, nobis odit quam, dolores facere id? Iure ratione accusantium laborum?
+                Doloremque optio dolorem autem dignissimos blanditiis ratione voluptas consequuntur ullam at earum repellendus distinctio reprehenderit illum atque deserunt beatae, aliquam sequi velit, nobis alias ex esse veritatis? Sequi, porro voluptates.
+                Corporis, porro praesentium, et labore nam animi minima suscipit ipsam aliquam laborum iure enim earum dolorum ut illo quam. Officiis perspiciatis ratione eos illum! Harum ipsa culpa ipsum quaerat aperiam!
+                Odio, obcaecati ab quasi temporibus quae dolores dicta. Non quaerat nisi et nam consequuntur sapiente delectus aliquid nihil praesentium nobis, laborum dicta quam natus ea? Eos sed incidunt iure ab?
+                Ipsam quis quos ea nemo aliquam commodi et iste, quas eligendi provident est magni cumque aspernatur! Illo cupiditate, laudantium labore corrupti temporibus eos aliquam, itaque vel qui nam optio aperiam!
+            </p>
+        </div>
+
+        <div id="tickets" class="section">
+            <h2>Ваши тикеты</h2>
+            <div class="section-head">
+                <div class="left-group">
+                    <button id="show-alltickets-btn">Показать все тикеты</button>
+                    <button id="add-ticket-btn">Добавить новый тикет</button>
+                </div>
+                <div class="right-group">
+                    <input type="text" id="searchTickets" class="search-input" placeholder="Поиск тикетов...">
+                    <button id="search-tickets">Поиск</button>
+                </div>
+            </div>
+            <table id="tickets-table">
+                <thead>
+                    <tr>
+                        <th style="width:10%">Номер тикета</th>
+                        <th style="width:10%">Создано</th>
+                        <th style="width:35%">Название</th>
+                        <th style="width:25%">Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Тикеты вставляем в JS -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="notifications" class="section">
+            <h2>Оповещения</h2>
+        </div>
+        
+        <div id="instructions" class="section">
+            <h2>Инструкции</h2>
+        </div>
+    </main>
+
+    <footer>
+        <p>Опубликовано в рамках проекта HelpDesk</p>
+    </footer>
 
     <div id="newTicketModal" class="modal">
         <div class="modal-content" style="width: 60%; max-width: 700px;">
@@ -66,13 +145,6 @@
         </div>
     </div>
 
-    <div id="notifications" class="section">
-        <h2>Оповещения</h2>
-    </div>
-
-    <div id="instructions" class="section">
-        <h2>Инструкции</h2>
-    </div>
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/ticket.js"></script>
