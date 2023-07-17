@@ -1,5 +1,7 @@
-let authModal = document.getElementById('authModal');
-let authButton = document.getElementById('authButton');
+function $(x) {return document.getElementById(x);}
+
+let authModal = $('authModal');
+let authButton = $('authButton');
 let closeButton = document.getElementsByClassName('close')[1];
 
 authButton.addEventListener('click', function() {
@@ -10,7 +12,7 @@ closeButton.addEventListener('click', function() {
     authModal.style.display = 'none';
 });
 
-document.getElementById('authForm').addEventListener('submit', function(event) {
+$('authForm').addEventListener('submit', function(event) {
     event.preventDefault();
     // Авторизация
 });

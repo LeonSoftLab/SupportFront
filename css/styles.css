@@ -31,6 +31,11 @@ button {
     display: block;
 }
 
+caption {
+    font-size: 14;
+    font-weight: bold;
+}
+
 .logo {
     height: 50px;
 }
@@ -67,7 +72,12 @@ button {
 
 .section {
     padding: 20px;
+    margin-top: 10px;
 }
+
+.section > div, .section > table  {
+    margin-top: inherit;
+ }
 
 .section-head {
     display: flex;
@@ -89,6 +99,8 @@ button {
 .search-input {
     height: 25px;
     font-size: 12px;
+    min-width: 150px;
+    max-width: 250px;
 }
 
 .modal {

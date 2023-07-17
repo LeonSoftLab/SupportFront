@@ -1,3 +1,5 @@
+function $(x) {return document.getElementById(x);}
+
 class Task {
     constructor(id, createDate, name, status) {
         this.id = id;
@@ -83,9 +85,9 @@ class TaskView {
 
 // let addTaskButton = document.querySelector("#add-ticket-btn");
 // определяем элементы на странице и привязываем функции на события
-let showAllButton = document.querySelector("#show-alltickets-btn");
-let tasksTable = document.querySelector('#tickets-table').getElementsByTagName('tbody')[0];
-let newTicketFormModal = document.getElementById('newTicketModal');
+let showAllButton = $('show-alltickets-btn');
+let tasksTable = $('tickets-table').getElementsByTagName('tbody')[0];
+let newTicketFormModal = $('#newTicketModal');
 
 let tasksListView = new TasksListView(tasksTable);
 
@@ -99,24 +101,24 @@ function showAllTicketsHandler() {
     tasksListView.drawAll();
 }
 
-document.getElementById('searchTickets').addEventListener('input', function(e) {
+$('searchTickets').addEventListener('input', function(e) {
     let searchTerm = e.target.value;
     console.log(searchTerm)
 });
 
-document.getElementById('newTicketForm').addEventListener('submit', function(event) {
+$('newTicketForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    let ticketTitle = document.getElementById('ticketTitle').value;
-    let ticketDescription = document.getElementById('ticketDescription').value;
+    let ticketTitle = $('ticketTitle').value;
+    let ticketDescription = $('ticketDescription').value;
     // Отправка нового тикета
 });
 
-document.getElementById('add-ticket-btn').addEventListener('click', function() {
-    document.getElementById('newTicketModal').style.display = 'block';
+$('add-ticket-btn').addEventListener('click', function() {
+    $('newTicketModal').style.display = 'block';
 });
 
 document.getElementsByClassName('close')[0].addEventListener('click', function() {
-    document.getElementById('newTicketModal').style.display = 'none';
+    $('newTicketModal').style.display = 'none';
 });
 
 window.addEventListener('click', function(event) {
