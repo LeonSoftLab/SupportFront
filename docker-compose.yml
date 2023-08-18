@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx_SupportFront:
+    container_name: nginx_SupportFront
+    image: nginx:latest
+    restart: "no"
+    ports:
+      - 8080:80
+    volumes:
+      - './app:/usr/share/nginx/html'
