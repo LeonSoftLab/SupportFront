@@ -2,7 +2,7 @@ function $(x) {return document.getElementById(x);}
 
 let authModal = $('authModal');
 let authButton = $('authButton');
-let closeButton = document.getElementsByClassName('close')[1];
+let closeButton = authModal.querySelector('span.close');
 
 authButton.addEventListener('click', function() {
     authModal.style.display = 'block';

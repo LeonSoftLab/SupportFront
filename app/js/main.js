@@ -8,10 +8,8 @@ function hideAllSections() {
 }
 
 function showSection(id) {
-    // Проходимся по всем секциям
-    const sections = document.querySelectorAll('.section');
+    let sections = document.querySelectorAll('.section');
     for(let i=0; i<sections.length; i++) {
-        // Если id секции совпадает с переданным id, то показываем секцию, иначе скрываем
         if(sections[i].id === id) {
             sections[i].style.display = 'block';
         } else {
@@ -20,8 +18,21 @@ function showSection(id) {
     }
 }
 
+function navItemClick(idSection) {
+    let navElement = this.event.target.parentElement;
+    let NavbarNavElement = navElement.parentElement;
+    if (NavbarNavElement) {
+        let liElements = NavbarNavElement.querySelectorAll('li');
+        liElements.forEach(function(liElement) {
+            liElement.classList.remove('active');
+            });
+    }
+    navElement.classList.add('active');
+    showSection(idSection)
+}
+
 // Добавляем обработчики событий для элементов меню
-let menuItems = document.querySelectorAll('.menu a');
+let menuItems = document.querySelectorAll('.navbar li a');
 for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener('click', function(event) {
         event.preventDefault();

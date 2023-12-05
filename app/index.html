@@ -2,30 +2,55 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelpDesk 2.0 User Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" href="icons/Cycle128.ico" type="image/x-icon">
+
+    <title>HelpDesk 2.0 User Portal</title>
 </head>
 <body>
-
     <header>
-        <img src="images/LogoCompany.png" class="logo" alt="Logo">
-        <!-- Горизонтальное меню -->
-        <nav class="menu">
-            <ul>
-                <li><a href="#news" onclick="showSection('news')">Новости</a></li>
-                <li><a href="#tickets" onclick="showSection('tickets')">Тикеты</a></li>
-                <li><a href="#notifications" onclick="showSection('notifications')">Оповещения</a></li>
-                <li><a href="#instructions" onclick="showSection('instructions')">Инструкции</a></li>
-            </ul>
-        </nav>
-        <button id="authButton" class="authButton">Авторизация</button>
-    </header>
+        <nav class="mb-1 navbar navbar-expand-sm fixed-top navbar-dark unique-color" style="background-color: #3f729b">
+            <a class="navbar-brand" href="#">
+                <img src="images/LogoCompany.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li id="navNews" class="nav-item active">
+                        <a class="nav-link" href="#news">Информация</a>
+                    </li>
+                    <li id="navTickets" class="nav-item">
+                        <a class="nav-link" href="#tickets">Тикеты</a>
+                    </li>
+                    <li id="navNotifications" class="nav-item">
+                        <a class="nav-link" href="#notifications">Оповещения</a>
+                    </li>
+                    <li id="navInstructions" class="nav-item">
+                        <a class="nav-link disabled" href="#instructions">Инструкции</a>
+                    </li>
+                </ul>
+                <div class="form-inline ml-auto">
+                    <button type="button" id="authButton" class="btn btn-primary">Авторизация</button>
+                    <button type="button" class="btn btn-outline-dark"> Уведомления
+                        <span class="badge badge-light">2</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <div id="news" class="section">
-            <h2>Новости</h2>
+            <h2>Информация</h2>
+            <div class="col-12">
+                Далеко-далеко за словесными <span class="badge badge-primary">это</span> горами в стране, гласных и согласных живут рыбные тексты. До злых запятых дорогу предупреждал <span class="badge badge-secondary">текст</span> вскоре языком родного большой всемогущая, всеми. Жаренные составитель бросил подпоясал переписывается <span class="badge badge-success">рыба</span> рекламных однажды предупреждал страна.
+            </div>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio libero earum in modi eveniet sed dolores atque. Quae, exercitationem animi. Exercitationem assumenda tempora at delectus dolor deleniti explicabo quidem vel!
                 Quo voluptatibus numquam provident consequuntur officiis iusto quae eligendi voluptates recusandae neque distinctio praesentium eos ea doloribus ab unde, earum alias sint sunt modi reprehenderit a rerum! Perferendis, consequatur? Nihil.
@@ -79,21 +104,20 @@
                 Ipsam quis quos ea nemo aliquam commodi et iste, quas eligendi provident est magni cumque aspernatur! Illo cupiditate, laudantium labore corrupti temporibus eos aliquam, itaque vel qui nam optio aperiam!
             </p>
         </div>
-
         <div id="tickets" class="section">
             <h2>Ваши тикеты</h2>
             <div class="section-head">
                 <div class="left-group">
-                    <button id="show-alltickets-btn">Показать все тикеты</button>
-                    <button id="add-ticket-btn">Добавить новый тикет</button>
+                    <button type="button" id="show-alltickets-btn" class="btn btn-outline-info">Показать все тикеты</button>
+                    <button type="button" id="add-ticket-btn" class="btn btn-outline-success">Добавить новый тикет</button>
                 </div>
                 <div class="right-group">
-                    <input type="text" id="searchTickets" class="search-input" placeholder="Поиск тикетов...">
-                    <button id="search-tickets">Поиск</button>
+                    <input class="form-control" type="text" id="searchTickets" placeholder="Поиск тикетов...">
+                    <button class="btn btn-outline-success" id="search-tickets">Поиск</button>
                 </div>
             </div>
-            <table id="tickets-table">
-                <thead>
+            <table id="tickets-table" class="table table-hover table-bordered">
+                <thead class="table-primary">
                     <tr>
                         <th style="width:10%">Номер тикета</th>
                         <th style="width:10%">Создано</th>
@@ -106,9 +130,14 @@
                 </tbody>
             </table>
         </div>
-        
         <div id="notifications" class="section">
             <h2>Оповещения</h2>
+            <div class="alert alert-primary fade show">
+                <h4>01.12.2023: Оповещение об отключении серверов</h4>
+                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Диких своего, если переписали коварных гор текст лучше запятых её.</p>
+                <hr>
+                <p>@admin</p>
+            </div>
         </div>
         
         <div id="instructions" class="section">
@@ -116,37 +145,74 @@
         </div>
     </main>
 
-    <footer>
-        <p>Опубликовано в рамках проекта HelpDesk</p>
+    <footer class="page-footer blue lighten-4">
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+            Опубликовано в рамках проекта <a class="text-white" href="/">HelpDesk</a> (2023)
+          </div>
     </footer>
-
     <div id="newTicketModal" class="modal">
         <div class="modal-content" style="width: 60%; max-width: 700px;">
-            <span class="close">&times;</span>
-            <form id="newTicketForm">
-                <label for="ticketTitle">Наименование:</label>
-                <input type="text" id="ticketTitle" required>
-                <label for="ticketDescription">Описание:</label>
-                <textarea id="ticketDescription" required></textarea>
-                <button type="submit">Создать</button>
+            <span class="close ml-auto">&times;</span>
+            <form id="newTicketForm" class="card">
+                <div class="card-body">
+                    <div class="md-form">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <label for="ticketForm-Title">Наименование:</label>
+                        <input type="text" id="ticketForm-Title" class="form-control" required></input>
+                    </div>
+                    <div class="md-form">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <label for="ticketForm-Description">Описание:</label>
+                        <textarea type="text" id="ticketForm-Description" class="form-control md-textarea" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success">Создать</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
-
-    <!-- Добавляем окно авторизации (по умолчанию скрытое) -->
+    <!-- Authorization window (hidden by default) -->
     <div id="authModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <form id="authForm">
-                <label for="username">Логин:</label>
-                <input type="text" id="username" required>
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" required>
-                <button type="submit">Войти</button>
+            <span class="close ml-auto">&times;</span>
+            <form id="authForm" class="card">
+                <div class="card-body">
+                    <!--Header-->
+                    <div class="text-center cyan-text">
+                        <h3>
+                            <i class="fas fa-lock cyan-text"></i> Авторизация:</h3>
+                        <hr class="my-4">
+                    </div>
+                    <!--Body-->
+                    <div class="md-form">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="text" id="authForm-email" class="form-control">
+                        <label for="authForm-email">Ваш логин / email</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" id="authForm-pass" class="form-control">
+                        <label for="authForm-pass">Ваш пароль</label>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success">Войти</button>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <p>Не зарегистрированы?
+                        <a href="#">Регистрация</a>
+                    </p>
+                    <p>Забыли
+                        <a href="#">пароль?</a>
+                    </p>
+                </div>
             </form>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/ticket.js"></script>

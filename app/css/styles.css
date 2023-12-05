@@ -5,30 +5,12 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: #f8f8f8;
+    padding-bottom: 4rem;
 }
 
-footer {
-    background-color: #f5f5dc;
-    text-align: center;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 10px;
-}
-
-footer p {
-    margin: auto;
-}
-
-button {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: block;
+main {
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 caption {
@@ -38,36 +20,6 @@ caption {
 
 .logo {
     height: 50px;
-}
-
-.menu {
-    background-color: #333;
-    height: auto;
-    background-color: #f5f5dc;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.menu a {
-    text-decoration: none;
-    line-height: 50px;
-    padding: 0 10px;
-    transition: background-color 0.3s;
-    display: block;
-    padding: 10px 15px;
-    line-height: 30px;
-}
-
-.menu a:hover {
-    color: #fff;
-    background-color: #59a8f7;
 }
 
 .section {
@@ -173,30 +125,11 @@ form button {
     height: 40px;
 }
 
-#tickets table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-}
-
-#tickets table th,
-#tickets table td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: left;
-}
-
-#tickets table th {
-    background-color: #f2f2f2;
-}
-
+/*
 #tickets table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-
-#tickets table tr:hover {
-    background-color: #f5f5f5;
-}
+*/
 
 #newTicket {
     display: none;

@@ -87,7 +87,7 @@ class TaskView {
 // определяем элементы на странице и привязываем функции на события
 let showAllButton = $('show-alltickets-btn');
 let tasksTable = $('tickets-table').getElementsByTagName('tbody')[0];
-let newTicketFormModal = $('#newTicketModal');
+let newTicketFormModal = $('newTicketModal');
 
 let tasksListView = new TasksListView(tasksTable);
 
